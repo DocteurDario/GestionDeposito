@@ -1,25 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace GestionDeposito.Modelo
 {
-    internal class Pasillo
+    public class Pasillo
     {
-        public int IDPasillo { get; set; }  
+        public int IDPasillo { get; set; }
         public string Nombre { get; set; }
-        public int IDCliente { get; set; }   
-        public int IDContenedor { get; set; }   
-        public LadoPasillo LADOPASILLO { get; set; }
-        public bool Activo { get; set; }    
+        public int IDCliente { get; set; }
+        public int IDContenedor { get; set; }
+        public bool Activo { get; set; }
 
-    }
-
-    public enum LadoPasillo 
-    {
-        LadoA,
-        LaboB
+        public Pasillo() 
+        {
+        }
+        public Pasillo(int idPasillo, string nombre)
+        {
+            IDPasillo = idPasillo;
+            Nombre = nombre;
+        }
     }
 }
